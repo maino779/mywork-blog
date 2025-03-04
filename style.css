@@ -1,408 +1,309 @@
 @charset "UTF-8";
-
-html{
-    font-size: 100%;
+html {
+  font-size: 100%;
 }
 
-body{
-    background-color: #f0f0f0;
-    color: #000;
-    font-size: 0.875rem;
+body {
+  color: #24292e;
 }
 
-a{
-    background-color: #f0f0f0;
-    color: #000;
-    text-decoration: none;
+a {
+  text-decoration: none;
+  cursor: pointer;
+  color: #24292e;
 }
 
-li{
-    list-style: none;
+* {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+li {
+  list-style: none;
 }
 
 .wrapper {
-    width: 100%;
-    max-width: 1032px;
-    padding: 0 16px;
-    margin: 0 auto;
-  }
-
-img{
-    max-width: 100%;
+  max-width: 960px;
+  margin: 0 auto 130px auto;
+  font-size: 0.9ream;
+  padding: 0 4%;
 }
 
-h2{
-    font-size: 2rem;
-    font-family: Arial, Helvetica, sans-serif;
+.site-title {
+  line-height: 1px;
 }
 
-.inner {
+.site-title a {
+  display: block;
+}
+
+.sec-title {
+  font-size: 1.5rem;
+  text-align: center;
+  margin-bottom: 65px;
+}
+
+.link {
+  display: block;
+  text-align: center;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+/*-------------------------------------------
+ヘッダー
+-------------------------------------------*/
+#header {
+  max-width: 960px;
   display: flex;
+  justify-content: space-between;
   align-items: center;
+  height: 270px;
+  margin: 0 auto;
+  padding: 0 4%;
 }
 
-.inner li :hover{
- opacity: 0.7;
+#header ul {
+  display: flex;
+  padding: 10px 0;
 }
 
-.inner ul{
-    display: flex;
-    gap: 20px;
-    
+#header li {
+  font-size: 0.9rem;
+  margin-left: 30px;
 }
 
-/* header */
-#header{
-    display: flex;
-    justify-content: space-between;
-    align-content: center;
+#header li a {
+  color: #24292e;
 }
 
-.logo{
-    width: 100px;
-    margin-right: 15px;
+#header li a:hover {
+  opacity: 0.7;
 }
 
-.contact {
- background-color:black;
- color: white;
- line-height:80px ;
- width: 200px;
- text-align: center;
-
+#header li img.icon {
+  width: 20px;
 }
 
-
-/* .mainvisual */
-.mainvisual{
-    object-fit: cover;
-    height: 70%;
-    margin-bottom:10px;
+/*-------------------------------------------
+Mainvisual
+-------------------------------------------*/
+#mainvisual {
+  margin-bottom: 80px;
 }
 
-/* news */
-#news span{
-    background-color: black;
-    color: white;
-    padding: 0.5px 5px;
-    text-align: center;
-}
-.news-title{
-    margin-left: 15px;
-}
-.news-content{
-    display: flex;
-    justify-content: center;
-    margin-bottom: 80px;     
-}
-#news li{
-    width: calc(100%/3);
-    border-right: solid 1px #000;
-    padding:10px 20px;
+#mainvisual img {
+  width: 100%;
+  max-width: 1920px;
+  height: 420px;
+  object-fit: cover;
 }
 
-#news li:last-child{
-    border-right: none;
+/*-------------------------------------------
+About
+-------------------------------------------*/
+#about ul {
+  margin-bottom: 30px;
 }
 
-
-.section-title{
-    position: relative;
-    margin-bottom: 50px;
-        padding-top: 80px;
-        padding-left: 5px;
-        flex-wrap: wrap;
-
+#about li:first-child {
+  margin-bottom: 30px;
 }
-.section-title::after{
-    position: absolute;
-    content: "";
-    width: 40px;
-    height: 2px;
-    background-color: black;
-    top: 150px;
+
+#about p {
+  text-align: justify;
 }
-.subcontent {
-    display: flex;
-    width:100%;
+
+/*-------------------------------------------
+Works
+-------------------------------------------*/
+#works ul {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 50px;
+}
+
+#works li {
+  width: 31%;
+  margin-bottom: 23px;
+}
+
+/*-------------------------------------------
+News
+-------------------------------------------*/
+#news dl {
+  display: flex;
+  flex-wrap: wrap;
+  border-top: solid 1px #c8c8c8;
+  margin-bottom: 20px;
+}
+
+#news dt {
+  width: 20%;
+  border-bottom: solid 1px #c8c8c8;
+  padding: 15px;
+  box-sizing: border-box;
+}
+
+#news dd {
+  width: 80%;
+  border-bottom: solid 1px #c8c8c8;
+  padding: 15px;
+  box-sizing: border-box; /* パディング込みのサイズ計算 */
+}
+
+/*-------------------------------------------
+Contact
+-------------------------------------------*/
+#contact dl {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+#contact dt {
+  width: 15%;
+}
+
+#contact dd {
+  width: 85%;
+  margin-bottom: 10px;
+}
+
+#contact dd input,
+#contact dd textarea {
+  width: 100%;
+  border: solid 1px #c8c8c8;
+  padding: 10px;
+}
+
+#contact dd textarea {
+  height: 10rem;
+}
+
+#contact .button {
+  text-align: center;
+}
+
+#contact .button input {
+  width: 200px;
+  background-color: #24292e;
+  color: #fff;
+  padding: 15px 0;
+  border: solid 1px #24292e;
+}
+
+#contact .button input:hover {
+  background: #fff;
+  color: #24292e;
+}
+
+/*-------------------------------------------
+フッター
+-------------------------------------------*/
+#footer {
+  background-color: #24292e;
+  color: #fff;
+  font-size: 0.5rem;
+  padding: 10px 20px;
+  text-align: center;
+}
+
+/*-------------------------------------------
+SP
+-------------------------------------------*/
+@media screen and (max-width: 600px) {
+  .wrapper {
+    margin-bottom: 70px;
+  }
+  .site-title {
+    margin-top: 20px;
+  }
+  .sec-title {
+    margin-bottom: 40px;
+  }
+  /*-------------------------------------------
+  ヘッダー
+  -------------------------------------------*/
+  #header {
+    max-width: 100%;
+    height: auto;
+    flex-direction: column;
+  }
+  #header li {
+    font-size: 0.8rem;
+    margin-left: 20px;
+  }
+  #header li:first-child {
     margin-left: 0;
-}
-.about-content{
-    display: flex;
-    width:100%;
-}
-.about-visual {
-    width:60%;
-    object-fit: cover;
-    margin: 0;
-    padding: 0;
-}
-.about-right{
-    padding: 0 40px;
-}
-
-.text-content{  
+  }
+  /*-------------------------------------------
+  Works
+  -------------------------------------------*/
+  #works ul {
     flex-direction: column;
-  
-}
-
-
-.subcontent img{
+  }
+  #works li {
     width: 100%;
-    height:400px ;
-    object-fit: cover;
- 
-}
-
-
-
-.text-content{
-    padding-top: 60px;
-}
-
-.imgcontent{
-    display: flex;
-    justify-content: center;
-    gap: 80px;
-    width:100%;
-}
-
-.leftimg{
-    padding-top: 120px;
-    margin-right: 0px;
-    width: 35%;
-}
-
-.rightimg{
-    width: 35%;
-}
-
-.imgcontent img{
-    width: 100%;
-    object-fit: cover;
-}
-
-.imgcontent p{
-    font-weight: bold;
-}
-
-.comcontent{
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    
-   
-}
-   
-.section-title{
-   display: flex;
-   flex-direction: column;
-
-
-}
-
-.company-content{
-    background-color: #fff;
-    width:500px;
-    height:600px;
-    padding-left: 40px;
-    margin:80px 120px;
-    position: relative;
-}
-.company-infomation{
-   
-    width:100%;
-   
-}
-
-.company-img {
-    width: 450px;
-    position: absolute;
-    top: 50px;
-    right: -400px;
-}
-
-.company-img img{
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
-  
-} 
-
-.company-infomation dl{
-    width:100% ;
-    display: flex;
-    flex-wrap: wrap;
-    line-height: 40px;
-   
-}
-
-.company-infomation dt{
-    width: 20%;
-}
-
-.company-infomation dd{
-width: 80%;
-margin-left: 0;
-}
-
-.footer-content{
-    display: flex;
-    justify-content: space-between;
-    padding-top: 40px;
-    align-items: center;
-    
-}
-
-#footer{
-    background-color: white;
-    margin: 0;
-    height: 200px;
-    display: flex;
+  }
+  /*-------------------------------------------
+  News
+  -------------------------------------------*/
+  #news dl {
     flex-direction: column;
-    padding: 0 60px;
-}
-
-.footer-subtitle{
-    font-size: 0.8rem;   
-}
-.footer-end{
-    padding-top: 20px;
-}
-
-
-#footer p{
-    font-size: 0.6rem;
-
-   
-}
-
-
-@media screen and (max-width:700px){
-    .contact{
-        display: none;
-    }
-
-    .inner{
-        display: block;
-        padding-bottom: 10px;
-    }
-    /* mainvisual */
-    .mainvisual img{
-        width:100%;
-        height: 650px;
-        object-fit: cover;
-    }
-
-    /* NEWS */
- 
- 
-    #news ul{
-        display: block;
-        justify-content: center;
-        flex-wrap: wrap;
-        line-height: 30px;
-       
-    }
-    
-    #news li{
-        border-right: none;
-        width: 100%;
-    }
-    
-    #news span{
-        background-color: black;
-        height: 20px;
-        color: white;
-        padding: 0.5px 5px;
-        text-align: center;
-    }
-
-   .content{
-    margin-left: 0%;
-   }
-   
-   
-    /* .about */
- .about-content{
-    display: flex;
-    flex-direction: column;
- }
- .about-visual{
+  }
+  #news dt {
     width: 100%;
- }
- .about-right{
-    padding:0 10px;
- }
-    .about-visual img{
-        width:100%;
-        object-fit: cover;
-    }
-    
-    .subcontent{
-        display:block;
-
-    }
-
-
-    /* business */
-    .busicontent{
-        display: block;
-    }
-    
-    .imgcontent {
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-    }
-   
-    .leftimg{
-        display: inline-block;
-        width: 100%;
-        object-fit: cover;
-        padding-top: 0;
-    }
-    
-    .rightimg{
-        display: inline-block;
-        width:100%;
-        object-fit: cover;
-        
-    }
-
-    /* .company */
-    .company-contents{
-        display:flex;
-        flex-direction: column;
-        position: static;
-    }
-    .company-content{
-      position: static;
-      width:100%;
-    
-    }
-
- 
-    .company-img {
-        display:inline-block;
-        position:static; 
-        margin-top: 70px;
-        margin-left: 0;
-        margin-right: 10px;
-        width:95%;
-    }
-   .company-img img{
-    height: 300px;
-   }
- 
-    /* .footer */
-    #footer{
-        margin-top: 240px;
-        padding: 0 15px;
-    }
-    .footer-content{
-        display: block;
-        
-    }
-
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+  #news dd {
+    width: 100%;
+    padding-top: 0;
+  }
+  /*-------------------------------------------
+  Contact
+  -------------------------------------------*/
+  #contact dl {
+    flex-direction: column;
+  }
+  #contact dt {
+    width: 100%;
+  }
+  #contact dd {
+    width: 100%;
+  }
 }
+/*-------------------------------------------
+ 投稿
+ -------------------------------------------*/
+#single ul {
+  display: block;
+}
+
+#single li {
+  width: 70%;
+  margin: 60px auto;
+}
+
+/*-------------------------------------------
+ news
+ -------------------------------------------*/
+.article-date {
+  margin-bottom: 50px;
+}
+
+/*-------------------------------------------
+ contact
+ -------------------------------------------*/
+.form-group {
+  width: 100%;
+}/*# sourceMappingURL=style.css.map */
